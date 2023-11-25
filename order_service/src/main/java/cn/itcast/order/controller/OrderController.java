@@ -19,8 +19,10 @@ public class OrderController {
 
 	@RequestMapping(value = "/buy/{id}",method = RequestMethod.GET)
 	public Product findById(@PathVariable Long id) {
-		Product product = restTemplate.getForObject("http://localhost:9001/product/1",
-				Product.class);;
+		// Product product = restTemplate.getForObject("http://localhost:9001/product/1",
+		// 		Product.class);
+		Product product = restTemplate.getForObject("http://service-product/product/1",
+				Product.class);
 		return product;
 	}
 

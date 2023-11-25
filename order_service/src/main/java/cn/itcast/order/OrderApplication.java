@@ -17,7 +17,7 @@ public class OrderApplication {
 	 *  向其中集成了ribbon的支持
 	 */
 
-	// @LoadBalanced
+	@LoadBalanced
 	@Bean
 	public RestTemplate restTemplate() {
 		return new RestTemplate();
